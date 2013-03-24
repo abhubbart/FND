@@ -1,4 +1,21 @@
 FND::Application.routes.draw do
+  get 'about' => 'pages#about'
+  get 'blog' => "pages#blog"
+  get 'kz_activities' => "pages#kz_activities"
+  get 'kz_food' => "pages#kz_food"
+  get 'kz_stuff' => "pages#kz_stuff"
+  get 'pz_p101' => "pages#pz_p101"
+  get 'contact' => "pages#contact"
+
+  root :to => 'pages#home'
+  #get "pages/about"
+  #get "pages/blog"
+  #get "pages/kz_activities"
+  #get "pages/kz_food"
+  #get "pages/kz_stuff"
+  #get "pages/pz_p101"
+  #get "pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

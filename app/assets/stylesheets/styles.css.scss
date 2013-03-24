@@ -1,12 +1,54 @@
 @import 'bootstrap';
 
-body {
-	padding-top:60px;
-}
 
 @import 'bootstrap-responsive';
 
+/* This makes sub-menus visible on hover */
 @media screen and (min-width: 940px)
 {
   ul.nav li.dropdown:hover ul.dropdown-menu {display: block; margin-top:-1px;}
+  ul.nav li:hover {margin-top:-1px;}
+}
+
+
+html,body{
+    height: 100%
+}
+
+#footer {
+	
+	color: $grayLight;
+	height: 60px;
+	background-color: #f5f5f5;
+	a {
+		color: $gray;
+	}
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push{
+	height: 0px;
+}
+ 
+@media (max-width: 767px) {
+	#footer {
+	  margin-left: -20px;
+	  margin-right: -20px;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+}
+
+
+#wrap > .container-fluid {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }

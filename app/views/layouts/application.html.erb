@@ -10,6 +10,10 @@
 	<div id="wrap">
 		<%= render 'layouts/new_header' %>
 		<div class="container-fluid">
+			<% flash.each do |name, msg| %>
+				<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+			<% end %>
+
 		    <div class="span8 offset1">
 		    	<%= yield %>
 		    </div>

@@ -1,4 +1,6 @@
 FND::Application.routes.draw do
+  devise_for :users
+
   get 'about' => 'pages#about'
   get 'blog' => "pages#blog"
   get 'kz_activities' => "pages#kz_activities"
